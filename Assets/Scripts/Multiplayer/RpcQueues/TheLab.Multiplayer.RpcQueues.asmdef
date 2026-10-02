@@ -1,0 +1,17 @@
+{
+    "name": "TheLab.Multiplayer.RpcQueues",
+    "rootNamespace": "",
+    "references": [
+        "GUID:dea62d628425b494bbfda50b47fe3739",
+        "GUID:d4d97e13b157b6045b2ad828d38ecf83"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

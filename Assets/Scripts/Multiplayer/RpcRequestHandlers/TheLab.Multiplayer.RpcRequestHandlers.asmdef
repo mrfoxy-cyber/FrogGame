@@ -1,0 +1,23 @@
+{
+    "name": "TheLab.Multiplayer.RpcRequestHandlers",
+    "rootNamespace": "",
+    "references": [
+        "GUID:dea62d628425b494bbfda50b47fe3739",
+        "GUID:8cd03fc7bd78996459efff8fcc66ab3e",
+        "GUID:380005724380b7949a3f92832fa43caa",
+        "GUID:c48388e247d6ea84cbedc6b77d0e320f",
+        "GUID:d4d97e13b157b6045b2ad828d38ecf83",
+        "GUID:f4f2c6eabbb59404e80125f506f4fcc0",
+        "GUID:b74714ca47af600488d2d16661d10135",
+        "GUID:6b6fe98b1a016924895a7d52b74b6202"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

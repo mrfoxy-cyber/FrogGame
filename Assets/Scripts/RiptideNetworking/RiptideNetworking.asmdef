@@ -1,0 +1,16 @@
+{
+    "name": "RiptideNetworking",
+    "rootNamespace": "",
+    "references": [
+        "GUID:22cefcaf9a2787642baeead9d637d60d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

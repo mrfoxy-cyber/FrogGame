@@ -1,0 +1,21 @@
+{
+    "name": "TheLab.Multiplayer.Workers",
+    "rootNamespace": "",
+    "references": [
+        "TheLab.Multiplayer.Repositories",
+        "TheLab.Multiplayer.Contracts",
+        "RiptideNetworking",
+        "TheLab.Multiplayer.RpcQueues",
+        "TheLab.Multiplayer.Attributes",
+        "TheLab.Multiplayer.Types"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

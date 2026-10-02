@@ -1,0 +1,19 @@
+{
+    "name": "TheLab.Multiplayer.NetworkIO",
+    "rootNamespace": "",
+    "references": [
+        "GUID:dea62d628425b494bbfda50b47fe3739",
+        "GUID:8cd03fc7bd78996459efff8fcc66ab3e",
+        "GUID:41b476f9e6248fc498fbdc0d54c91ee7",
+        "GUID:6b6fe98b1a016924895a7d52b74b6202"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

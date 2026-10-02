@@ -1,0 +1,17 @@
+{
+    "name": "TheLab.Observer",
+    "rootNamespace": "",
+    "references": [
+        "GUID:dea62d628425b494bbfda50b47fe3739",
+        "GUID:c24861dfbde9ae444901ffad8ac3712b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

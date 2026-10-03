@@ -41,3 +41,6 @@ Assets/Animations/froggy.avi.meta
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Local-only background music
+/web/assets/sounds/The Cloud of Dread.mp3

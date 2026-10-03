@@ -25,11 +25,13 @@ public class StartMenu : MonoBehaviour
     loadgamebutton.GetComponentInChildren<TextMeshProUGUI>().text = "Load Game";
     loadgamebutton.GetComponent<Button>().onClick.AddListener(LoadGameAction);
 
+#if !UNITY_WEBGL
     var battlebutton = Instantiate(MenuButton, Canvas.transform);
     battlebutton.transform.position = new Vector2(0.02f, -3.4f);
     battlebutton.transform.localScale = new Vector2(1, 1);
     battlebutton.GetComponentInChildren<TextMeshProUGUI>().text = "Battle";
     battlebutton.GetComponent<Button>().onClick.AddListener(BattleAction);
+#endif
 
   }
 
@@ -39,7 +41,12 @@ public class StartMenu : MonoBehaviour
 
 
     PlayerPrefs.SetInt("ActiveLevel", 1);
+#if UNITY_WEBGL
+    // The desktop introduction uses a large AVI file, which is not suitable for a browser build.
+    SceneManager.LoadScene("Levels");
+#else
     SceneManager.LoadScene("Video");
+#endif
 
     int i = 1;
     foreach (KeyValuePair<int, Levels> level in GameItemsContainer.Instance.Levels)

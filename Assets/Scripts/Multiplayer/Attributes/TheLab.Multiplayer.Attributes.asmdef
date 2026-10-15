@@ -1,0 +1,16 @@
+{
+    "name": "TheLab.Multiplayer.Attributes",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d4d97e13b157b6045b2ad828d38ecf83"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,18 @@
+{
+    "name": "TheLab.Multiplayer.Consumers",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6b6fe98b1a016924895a7d52b74b6202",
+        "GUID:dea62d628425b494bbfda50b47fe3739",
+        "GUID:b74714ca47af600488d2d16661d10135"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,16 @@
+{
+    "name": "TheLab.Multiplayer.Contracts",
+    "rootNamespace": "",
+    "references": [
+        "GUID:41b476f9e6248fc498fbdc0d54c91ee7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

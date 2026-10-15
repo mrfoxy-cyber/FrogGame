@@ -1,0 +1,17 @@
+{
+    "name": "TheLab.Multiplayer.Repositories",
+    "rootNamespace": "",
+    "references": [
+        "TheLab.Multiplayer.Contracts",
+        "TheLab.Observer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

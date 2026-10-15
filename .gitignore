@@ -27,3 +27,50 @@ appsettings.*.local.json
 .DS_Store
 Thumbs.db
 Desktop.ini
+# Unity-generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# IDE and editor files
+.vs/
+.vscode/
+.idea/
+# Unity generates project files at the repository root. Keep the .NET source projects.
+/*.csproj
+/*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity crash reports and generated packages
+sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Oversized local source media (GitHub rejects files over 100 MB)
+Assets/Animations/froggy.avi
+Assets/Animations/froggy.avi.meta
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local-only background music
+/web/assets/sounds/The Cloud of Dread.mp3

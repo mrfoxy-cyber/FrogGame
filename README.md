@@ -2,6 +2,14 @@
 
 Froggy Puzzle Pop is an ASP.NET Core web game built as a Clean Architecture exercise. The API owns game sessions, board rules, moves, scores, and level progression. The browser is responsible for presentation and animation.
 
+## Versions in this repository
+
+- `src/`, `tests/`, and `FrogGame.slnx`: the current C# / ASP.NET Core version described below.
+- `web/`: the earlier standalone browser version.
+- `Assets/`, `Packages/`, and `ProjectSettings/`: the preserved original Unity project.
+
+The earlier versions and their Git history are retained for reference.
+
 ## Architecture
 
 Dependencies point inward:

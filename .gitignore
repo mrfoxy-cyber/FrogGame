@@ -1,0 +1,29 @@
+# .NET build output
+[Bb]in/
+[Oo]bj/
+artifacts/
+TestResults/
+
+# Local runtime data
+**/App_Data/*.json
+**/App_Data/*.tmp
+
+# User and editor settings
+.vs/
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini

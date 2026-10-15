@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FrogGame.Domain\FrogGame.Domain.csproj" />
+    <ProjectReference Include="..\FrogGame.Application\FrogGame.Application.csproj" />
+    <ProjectReference Include="..\FrogGame.Infrastructure\FrogGame.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

@@ -59,7 +59,7 @@ const drawContext = { clearRect() {}, drawImage(image, x, y, width, height) { dr
 function element() {
   return { dataset: {}, style: {}, classList: { add() {}, remove() {} }, children: [],
     replaceChildren() { this.children = []; }, append(child) { this.children.push(child); },
-    setAttribute() {}, getAttribute(name) { return this[name]; }, addEventListener() {}, getContext() { return drawContext; } };
+    setAttribute(name, value) { this[name] = value; }, getAttribute(name) { return this[name]; }, addEventListener() {}, getContext() { return drawContext; } };
 }
 const elements = new Map();
 const playedSounds = [];
@@ -93,7 +93,11 @@ Object.assign(context, {
   requestAnimationFrame() {},
 });
 vm.runInContext(fs.readFileSync(path.join(root, 'score-store.js'), 'utf8'), context);
+vm.runInContext(fs.readFileSync(path.join(root, 'retro-digits.js'), 'utf8'), context);
 vm.runInContext(fs.readFileSync(path.join(root, 'game.js'), 'utf8'), context);
+for (let digit = 0; digit <= 9; digit++) assert.ok(fs.existsSync(path.join(root, `assets/numbers/${digit}.png`)), `Missing retro digit ${digit}`);
+vm.runInContext('RetroDigits.render(document.querySelector("#score"), 1203)', context);
+assert.equal(elements.get('#score').getAttribute('aria-label').replace(/\D/g, ''), '1203');
 vm.runInContext('board[7][0] = FROGS[0]; board[7][1] = FROGS[0]; renderBoard();', context);
 assert.equal(playedSounds.filter(id => id.startsWith('sound-connect-')).length, 1);
 assert.equal(vm.runInContext('animationStates.get("7-0").clip === GAME_ASSETS.clips.Right', context), true);

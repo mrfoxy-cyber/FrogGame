@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#47306c" />
     <title>FrogGame — Web Edition</title>
     <link rel="icon" type="image/png" href="assets/greenfrog.png" />
-    <link rel="stylesheet" href="styles.css?v=12" />
+    <link rel="stylesheet" href="styles.css?v=13" />
   </head>
   <body>
     <section id="intro" class="intro" aria-label="FrogGame introduction">
@@ -39,8 +39,8 @@
       <header class="game-header">
         <button id="main-menu" class="hud-button" type="button">Menu</button>
         <aside class="stats" aria-label="Game progress">
-          <div class="stat"><strong id="score" aria-label="Score" aria-live="polite">0</strong></div>
-          <div class="stat"><strong id="combo" aria-label="Top combo score">0</strong></div>
+          <div class="stat"><strong id="score" class="retro-number" aria-label="Score: 0" aria-live="polite"></strong></div>
+          <div class="stat"><strong id="combo" class="retro-number" aria-label="Top combo score: 0"></strong></div>
         </aside>
         <div class="header-controls">
           <button id="game-top-scores" class="hud-button" type="button" aria-label="Show top scores">★</button>
@@ -81,9 +81,9 @@
     <dialog id="scores-dialog" aria-labelledby="scores-title">
       <button class="scores-close dialog-close" type="button" aria-label="Close top scores">×</button>
       <h1 id="scores-title">Score</h1>
-      <p class="top-score-number" id="top-score-value">0</p>
+      <p class="top-score-number retro-number retro-number-large" id="top-score-value" aria-label="0"></p>
       <h2>Top combo score</h2>
-      <p class="top-score-number" id="top-combo-value">0</p>
+      <p class="top-score-number retro-number retro-number-large" id="top-combo-value" aria-label="0"></p>
       <button class="scores-close button" type="button">Back</button>
     </dialog>
     <audio id="background-music" src="assets/sounds/The Cloud of Dread.mp3" loop preload="auto" aria-hidden="true"></audio>
@@ -112,10 +112,11 @@
       <audio id="sound-hurray-3" preload="auto"><source src="assets/sounds/combosounds/Hurray(3).mp3" type="audio/mpeg" /></audio>
     </div>
     <script src="game-assets.js?v=1"></script>
+    <script src="retro-digits.js?v=1"></script>
     <script src="frog-logic.js?v=13"></script>
     <script src="grid-layout.js"></script>
     <script src="score-store.js?v=14"></script>
     <script src="audio.js?v=4"></script>
-    <script src="game.js?v=19"></script>
+    <script src="game.js?v=20"></script>
   </body>
 </html>

@@ -163,7 +163,7 @@ function playBackgroundMusic() {
 }
 
 function updateHud() {
-  scoreElement.textContent = score.toLocaleString();
+  RetroDigits.render(scoreElement, score);
   ScoreStore.update(score);
 }
 
@@ -175,8 +175,8 @@ function saveRun() {
 
 async function showTopScores() {
   await ScoreStore.refresh();
-  document.querySelector("#top-score-value").textContent = ScoreStore.best().toLocaleString();
-  document.querySelector("#top-combo-value").textContent = ScoreStore.bestCombo().toLocaleString();
+  RetroDigits.render(document.querySelector("#top-score-value"), ScoreStore.best());
+  RetroDigits.render(document.querySelector("#top-combo-value"), ScoreStore.bestCombo());
   scoresDialog.showModal();
 }
 
@@ -294,7 +294,7 @@ async function resetGame() {
   renderNextFrog();
   setMessage("Preparing the pond…");
   scoreBreakdown.textContent = "Each frog = 10 points · chain reactions multiply your points.";
-  comboElement.textContent = ScoreStore.bestCombo().toLocaleString();
+  RetroDigits.render(comboElement, ScoreStore.bestCombo());
   fitBoard();
 
   try {
@@ -388,7 +388,7 @@ async function dropFrog(col) {
     for (const reaction of result.reactions) {
       if (generation !== gameGeneration) return;
       score += reaction.awarded;
-      comboElement.textContent = ScoreStore.updateCombo(reaction.awarded).toLocaleString();
+      RetroDigits.render(comboElement, ScoreStore.updateCombo(reaction.awarded));
       updateHud();
       const matches = reaction.matches.map(position => ({ row: position.row, col: position.column }));
       scoreBreakdown.textContent = `${matches.length} frogs × 10 points × ${reaction.chain} chain = +${reaction.awarded.toLocaleString()} · Total: ${score.toLocaleString()}`;

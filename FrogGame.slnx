@@ -3,5 +3,6 @@
   <Project Path="src/FrogGame.Application/FrogGame.Application.csproj" />
   <Project Path="src/FrogGame.Infrastructure/FrogGame.Infrastructure.csproj" />
   <Project Path="src/FrogGame.Web/FrogGame.Web.csproj" />
+  <Project Path="src/FrogGame.Frontend/FrogGame.Frontend.csproj" />
   <Project Path="tests/FrogGame.Domain.Specs/FrogGame.Domain.Specs.csproj" />
 </Solution>

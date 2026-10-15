@@ -11,6 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.ConfigureHttpJsonOptions(options =>
     options.SerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 builder.Services.AddProblemDetails();
+builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy
+    .WithOrigins(builder.Configuration.GetSection("FrontendOrigins").GetChildren().Select(origin => origin.Value!).ToArray())
+    .AllowAnyHeader()
+    .AllowAnyMethod()));
 
 builder.Services.AddSingleton<IScoreCalculator, ClassicScoreCalculator>();
 builder.Services.AddSingleton<IGameRepository, InMemoryGameRepository>();
@@ -23,8 +27,7 @@ builder.Services.AddSingleton<ScoreService>();
 var app = builder.Build();
 
 app.UseExceptionHandler();
-app.UseDefaultFiles();
-app.UseStaticFiles();
+app.UseCors();
 
 var api = app.MapGroup("/api");
 api.MapGet("/health", () => Results.Ok(new
@@ -37,6 +40,5 @@ api.MapGameEndpoints();
 api.MapScoreEndpoints();
 
 app.Map("/api/{**path}", () => Results.NotFound());
-app.MapFallbackToFile("index.html");
 
 app.Run();

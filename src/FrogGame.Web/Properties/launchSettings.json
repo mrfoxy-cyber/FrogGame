@@ -2,11 +2,11 @@
   "profiles": {
     "FrogGame.Web": {
       "commandName": "Project",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:64908;http://localhost:64909"
+      "applicationUrl": "http://localhost:64909"
     }
   }
 }

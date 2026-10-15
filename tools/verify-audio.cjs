@@ -15,7 +15,7 @@ async function verify() {
     createBufferSource() { return { connect() {}, start(...args) { events.push(args); } }; }
   }
   const context = vm.createContext({ AudioContext, document: { querySelectorAll: () => [sound], querySelector: () => sound }, fetch: () => Promise.resolve({ ok: true, arrayBuffer: () => Promise.resolve(new ArrayBuffer(0)) }) });
-  const code = fs.readFileSync(path.join(__dirname, '../src/FrogGame.Web/wwwroot/audio.js'), 'utf8');
+  const code = fs.readFileSync(path.join(__dirname, '../src/FrogGame.Frontend/wwwroot/audio.js'), 'utf8');
   vm.runInContext(code + '\nglobalThis.audio = frogAudio;', context);
   const playing = context.audio.play('sound-frog');
   assert.equal(events[0], 'resume', 'Sound must unlock synchronously in the click gesture');

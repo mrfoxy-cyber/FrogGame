@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
-const root = path.resolve(__dirname, '../src/FrogGame.Web/wwwroot');
+const root = path.resolve(__dirname, '../src/FrogGame.Frontend/wwwroot');
 const context = vm.createContext({});
 vm.runInContext(fs.readFileSync(path.join(root, 'frog-logic.js'), 'utf8') + '\nglobalThis.logic = FrogLogic;', context);
 vm.runInContext(fs.readFileSync(path.join(root, 'grid-layout.js'), 'utf8') + '\nglobalThis.layout = GridLayout;', context);
@@ -92,6 +92,7 @@ Object.assign(context, {
   },
   requestAnimationFrame() {},
 });
+vm.runInContext(fs.readFileSync(path.join(root, 'api-client.js'), 'utf8'), context);
 vm.runInContext(fs.readFileSync(path.join(root, 'score-store.js'), 'utf8'), context);
 vm.runInContext(fs.readFileSync(path.join(root, 'retro-digits.js'), 'utf8'), context);
 vm.runInContext(fs.readFileSync(path.join(root, 'game.js'), 'utf8'), context);
